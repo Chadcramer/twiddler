@@ -25,35 +25,22 @@ $(document).ready(function(){
     index -= 1;
   }
 
+
   $('#btnRefresh').on('click', function(){
     location.reload();
   });
 
-  $('.userName').click(function() {
-    // console.log(allTweets);
-    // $('#btn').html('');
-    // $('#btn').append($('<button id="btn">Back</button>'));
-    $body.html('');
-    var user = $(this).text();
-    for (var tweets of allTweets){
-      if (tweets.includes(user)){
-        $body.append(tweets[1])
-      }
-    }
-    
-    $('.back').append($('<button id="btnBack">Back</button>'))
-
-    $('#btnBack').on('click', function(){
+    var userClick = $('.userName').on('click', function() {
       $body.html('');
-      allTweets.forEach(e=> $body.append(e[1]));
-    });
-    
-    // console.log(allTweets)
-    // var populated = allTweets.filter(e=> e.includes(this))
-    // console.log(populated)
-    // $body.append(this);
-
+      var user = $(this).text();
+      for (var tweets of allTweets){
+        if (tweets.includes(user)){
+          $body.append(tweets[1])
+        }
+      }
   });
+
+
 
     // let newArr = [];
     // for(let i = 0; i < allTweets.length; i++){
