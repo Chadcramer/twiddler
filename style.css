@@ -1,0 +1,55 @@
+
+
+html {
+	text-align: center;
+	background-color: #DCDCDC;
+
+}
+
+h1 {
+	color: #0084F8;
+	font-size: 80px;
+	font-family: initial;
+}
+
+h2 {
+	color: black;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 30px
+}
+
+#btnRefresh {
+  background-color: white;
+  border: groove;
+  border-color: 2px solid black;
+  color: black;
+  padding: 12px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#btnBack {
+  background-color: white;
+  border: groove;
+  border-color: 2px solid black;
+  color: black;
+  padding: 12px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tweets {
+	color: black; 
+	font-family: sans-serif;
+	font-weight: normal;
+	margin: auto;
+	width: 50%;
+	border-bottom: 1px solid gray; 
+	background-color: #E6F2FF;
+	padding: 10px;
+	border-left-style: solid;
+  	border-left-color: #96B0FF;
+}
