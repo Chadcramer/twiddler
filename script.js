@@ -29,8 +29,13 @@ $(document).ready(function(){
   $('#btnRefresh').on('click', function(){
     location.reload();
   });
+  $('.back').append($('<button id="btnBack">Back</button>'))
+  $('.back').hide();
 
-    var userClick = $('.userName').on('click', function() {
+  userClick();
+
+  function userClick(){
+    $('.userName').on('click', function() {
       $body.html('');
       var user = $(this).text();
       for (var tweets of allTweets){
@@ -38,7 +43,17 @@ $(document).ready(function(){
           $body.append(tweets[1])
         }
       }
-  });
+      
+      $('.back').show(300);
+      $('#btnBack').on('click', function(){
+        $body.html('');
+        allTweets.forEach(e=> {$body.append(e[1]);
+        $('.back').hide();
+        });
+        userClick();
+      });
+    });
+  }
 
 
 
